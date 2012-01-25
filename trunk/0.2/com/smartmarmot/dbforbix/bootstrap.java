@@ -33,13 +33,6 @@ public class bootstrap {
 	private static DBforBIX runner;
 	public static void printUsage() {
 		System.out.println(Constants.BANNER);
-		System.out.println("USAGE");
-		System.out
-		.println("[run.sh|run.bat] -Dlog4j.properties=log4jpropertiesfile [start|stop] configfile");
-		System.out
-		.println("log4jpropertiesfile     = E.g. ./conf/log4j.properties");
-		System.out
-		.println("configfile              = E.g. ./conf/config.props	");
 	}
 
 	/**

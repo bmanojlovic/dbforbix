@@ -63,7 +63,7 @@ public class Configurator {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logThis(Level.ERROR, "Error on Configurator getPropsFromFile("
+			logThis(Level.ERROR, "Error on Configurator reading properties file getPropsFromFile("
 					+ _filename + ") " + e.getMessage());
 			return null;
 		}
@@ -97,7 +97,7 @@ public class Configurator {
 			return queries;
 		} catch (Exception ex) {
 
-			logThis(Level.ERROR, "Error on Configurator on getQueries("
+			logThis(Level.ERROR, "Error on Configurator on reading properties file "+ _propsq.toString() +" getQueries("
 					+ parameter + "," + _propsq.toString() + ") "
 					+ ex.getMessage());
 			return null;
@@ -609,13 +609,13 @@ public class Configurator {
 			logThis(Level.INFO, "PidFile -> " + _pidfile);
 
 			if (_pidfile == "") {
-				logThis(Level.ERROR, "Error retrieving pidfile from " + _props);
+				logThis(Level.ERROR, "Error retrieving "+Constants.DBFORBIX_PIDFILE+" from " + _props);
 			}
 			return _pidfile;
 
 		} catch (Exception ex) {
 
-			logThis(Level.ERROR, "Error on Configurator getPidFile " + ex);
+			logThis(Level.ERROR, "Error retrieving "+Constants.DBFORBIX_PIDFILE+ ex);
 			return null;
 		}
 	}
@@ -634,8 +634,7 @@ public class Configurator {
 						+ Constants.QUERY_LIST_FILE));
 			}
 		} catch (Exception ex) {
-			logThis(Level.ERROR, "Error on Configurator on getQueryFile("
-					+ dbName + ") " + ex.getMessage());
+			logThis(Level.ERROR, "Error on Configurator on getting"+ Constants.QUERY_LIST_FILE+ "on database "+ dbName+ " "+ ex.getMessage());
 			logThis(Level.WARN, "I'm going to return getQueryFile() ");
 			return getQueryFile();
 		}
@@ -697,8 +696,8 @@ public class Configurator {
 			return propsq;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logThis(Level.ERROR, "Error on Configurator getQueryProp(" + dbname
-					+ ") " + e.getMessage());
+			logThis(Level.ERROR, "Error on Configurator getting "+Constants.QUERY_LIST_FILE +" " + dbname
+					+ e.getMessage());
 			return null;
 		}
 	}
@@ -785,8 +784,8 @@ public class Configurator {
 				return true;
 			}
 		} catch (Exception ex) {
-			logThis(Level.ERROR, "Error on Configurator on hasQueryFile("
-					+ dbName + ") " + ex.getMessage());
+			logThis(Level.ERROR, "Error on Configurator getting"+ Constants.QUERY_LIST_FILE
+					+ dbName + ex.getMessage());
 			return false;
 		}
 		return false;
