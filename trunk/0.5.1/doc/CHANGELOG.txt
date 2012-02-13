@@ -1,0 +1,18 @@
+0.1 Initial release 
+    for use with Oracle you need to download ojdbc6.jar and put it on /lib
+    for use with DB2 you need to download db2jcc_license_cu.jar db2jcc.jar and put it on /lib
+0.2 
+    fixed startup/shutdown scripts
+    implemented Apache Daemon Service and now DBforBIX can run as a service
+0.3 
+    fixed a minor bug on configuration files
+0.4 
+   added a new parameter DefaultQueryPeriod
+	This value modify the period for all the query contained in query.props file
+
+
+
+        
+    
+
+	
