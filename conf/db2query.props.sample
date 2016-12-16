@@ -1,8 +1,0 @@
-DefaultQueryPeriod=0.2
-QueryList=count.tables, count.activeapps
-
-count.tables.Query=select count(*) from syscat.tables
-count.tables.NoDataFound=0
-
-count.activeapps.Query=select count(*) from sysibmadm.applications
-count.activeapps.NoDataFound=0
